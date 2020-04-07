@@ -3,6 +3,7 @@ node_js:
     - '12'
 script:
     - npm run test
+    - npm run build
 deploy:
   provider: heroku
   app: mh-tutorial-cicd
