@@ -4,9 +4,15 @@ node_js:
 cache:
   directories:
   - node_modules
+
+before_install:
+  - npm install -g serve
+
 script:
   - npm run test
   - npm run build
+  - serve -s build
+
 deploy:
   provider: heroku
   app: mh-tutorial-cicd
